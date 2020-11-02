@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Teacher>
+
+@{
+    ViewData["Title"] = "Index2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index2</h1>
+
+
+@foreach (var item in Model)
+{
+    <h1>@item.Name=@item.Subject</h1>
+}
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Subject</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Subject</td>
+        </tr>
+    }
+
+
+</table>
